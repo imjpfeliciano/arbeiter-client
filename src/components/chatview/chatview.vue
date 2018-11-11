@@ -47,18 +47,21 @@ export default {
   methods:{
     handleClick: function(msg)
     {
-      const vm = this;
-      vm.messages.push({ text: msg, isFromUser: true, 
-        timestamp: moment().format('HH:mm') });
+      if(msg)
+      {
+        const vm = this;
+        vm.messages.push({ text: msg, isFromUser: true, 
+          timestamp: moment().format('HH:mm') });
+        vm.messagetext = "";
 
-
-      setTimeout(function()
-      {                  
-          vm.messages.push({ text: vm.botMessages[vm.botCount].text, isFromUser: false, 
-            timestamp: moment().format('HH:mm'), isButton: vm.botMessages[vm.botCount].isButton });
-  
-          vm.botCount++;
-      }, 1000);
+        setTimeout(function()
+        {                  
+            vm.messages.push({ text: vm.botMessages[vm.botCount].text, isFromUser: false, 
+              timestamp: moment().format('HH:mm'), isButton: vm.botMessages[vm.botCount].isButton });
+    
+            vm.botCount++;
+        }, 1000);
+      }
     }
   },
   data() {
