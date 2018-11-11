@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <div class="nav-wrapper indigo">
+    <div class="nav-wrapper indigo darken-4">
       <a href="/" class="brand-logo">
         <img :src="baseLogo">
         <span class="brand-name">Arbeiter</span>
