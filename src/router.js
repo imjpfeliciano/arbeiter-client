@@ -5,9 +5,8 @@ import Registro from './components/registro/registro.vue';
 import Login from './components/login/login.vue';
 import Catalogo from './components/dashboard/catalogo.vue';
 import Historial from './components/dashboard/historial.vue';
-
 import Filter from './components/filter/filter.vue';
-import Contact from './components/contact/contact.vue';
+import ChatView from './components/chatview/chatview.vue';
 
 Vue.use(Router);
 
@@ -37,7 +36,7 @@ export default new Router({
     {
       name: 'contact',
       path: '/contact/:id',
-      component: Contact,
+      component: ChatView,
     },
     {
       name: 'filter_mecanico',
