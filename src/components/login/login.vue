@@ -1,5 +1,5 @@
 <template>
-  	<div class="container">
+	<div class="container">
 		<div class="row grey lighten-3">
 			<div class="col s12">
 				<div class="row">
@@ -20,8 +20,9 @@
 					<div class ="col s5">
 					</div>
 					<div class="col s5">
-					 	<button class="btn waves-effect orange accent-4" onclick="window.location.href='/dashboard'">Submit
-				  		</button>
+						<div class="input-field col s12">
+							<a href="/dashboard" class="waves-effect waves-light btn orange accent-4">Registrar</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -30,14 +31,16 @@
 </template>
 
 <script>
-export default {
-  
+export default
+{
+	
 }
 </script>
 
 <style scoped>
-button {
-  background-color: #ffff8d;
+button
+{
+	background-color: #ffff8d;
 }
 </style>
 
