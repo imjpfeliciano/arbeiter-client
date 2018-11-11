@@ -7,6 +7,7 @@ import Catalogo from './components/dashboard/catalogo.vue';
 import Historial from './components/dashboard/historial.vue';
 import Filter from './components/filter/filter.vue';
 import ChatView from './components/chatview/chatview.vue';
+import Feedback from './components/feedback/feedback.vue';
 
 
 Vue.use(Router);
@@ -43,6 +44,11 @@ export default new Router({
       name: 'filter_mecanico',
       path: '/filter/mecanico',
       component: Filter,
+    },
+    {
+      name: 'feedback',
+      path: '/feedback/feedback',
+      component: Feedback,
     },
   ]
 })
