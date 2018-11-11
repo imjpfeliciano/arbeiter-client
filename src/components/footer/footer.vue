@@ -1,5 +1,5 @@
 <template>
-  <footer class="page-footer orange accent-4">
+  <footer class="page-footer indigo lighten-1">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -10,7 +10,7 @@
           <h5 class="white-text">Links</h5>
           <ul>
             <li><a class="grey-text text-lighten-3" href="/">Login</a></li>
-            <li><a class="grey-text text-lighten-3" href="/register">Registrar</a></li>
+            <li><a class="grey-text text-lighten-3" href="/registro">Registrar</a></li>
           </ul>
         </div>
       </div>

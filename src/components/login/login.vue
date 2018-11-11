@@ -1,30 +1,30 @@
 <template>
-	<div class="container">
-		<div class="row grey lighten-3">
-			<div class="col s12">
-				<div class="row">
-					<div class ="col s2">
-					</div>
-					<div class="input-field col s8 white">
-						<input placeholder="Usuario" id="user" type="email" class="validate">
-					</div>
+	<div class="card">
+		<div class="card-content">
+			<span class="card-title">Iniciar Sesión</span>
+			
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="email" type="email" class="validate">
+					<label for="email">Email</label>
 				</div>
-				<div class="row">
-					<div class ="col s2">
-					</div>
-					<div class="input-field col s8 white">
-						<input placeholder="Contraseña" id="pass" type="password" class="validate">
-					</div>
-				</div>
-				<div class="row">
-					<div class ="col s5">
-					</div>
-					<div class="col s5">
-						<div class="input-field col s12">
-							<a href="/dashboard" class="waves-effect waves-light btn orange accent-4">Registrar</a>
-						</div>
-					</div>
-				</div>
+			</div>
+			
+			<div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+		</div>
+		
+		<!-- Action buttons -->
+		<div class="row">
+			<div class="col s6">
+				<a class="waves-effect waves-light btn orange accent-2" href="/dashboard/catalogo">Iniciar Sesión</a>
+			</div>
+			<div class="col s6">
+				<a class="waves-effect waves-light btn orange accent-2" href="/registro">Registrarme</a>
 			</div>
 		</div>
 	</div>
@@ -37,11 +37,7 @@ export default
 }
 </script>
 
-<style scoped>
-button
-{
-	background-color: #ffff8d;
-}
+<style>
 </style>
 
 

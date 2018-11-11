@@ -3,10 +3,11 @@ import Router from 'vue-router';
 
 import Registro from './components/registro/registro.vue';
 import Login from './components/login/login.vue';
-import Dashboard from './components/dashboard/dashboard.vue';
+import Catalogo from './components/dashboard/catalogo.vue';
+import Historial from './components/dashboard/historial.vue';
+
 import Filter from './components/filter/filter.vue';
 import Contact from './components/contact/contact.vue';
-import Catalogo from './components/catalogo/catalogo.vue';
 
 Vue.use(Router);
 
@@ -19,14 +20,19 @@ export default new Router({
       component: Login,
     },
     {
-      name: 'register',
-      path: '/register',
+      name: 'registro',
+      path: '/registro',
       component: Registro,
     },
     {
-      name: 'dashboard',
-      path: '/dashboard',
-      component: Dashboard,
+      name: 'catalogo',
+      path: '/dashboard/catalogo',
+      component: Catalogo,
+    },
+    {
+      name: 'historial',
+      path: '/dashboard/historial',
+      component: Historial,
     },
     {
       name: 'contact',
@@ -37,26 +43,6 @@ export default new Router({
       name: 'filter_mecanico',
       path: '/filter/mecanico',
       component: Filter,
-    },
-    {
-      name: 'filter_electricista',
-      path: '/filter/electricista',
-      component: Filter,
-    },
-    {
-      name: 'filter_plomeria',
-      path: 'filter/plomeria',
-      component: Filter,
-    },
-    {
-      name: 'filter_construccion',
-      path: '/filter/construccion',
-      component: Filter,
-    },
-    {
-      name: 'catalogo',
-      path: '/catalogo',
-      component: Catalogo,
     },
   ]
 })
