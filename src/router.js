@@ -8,6 +8,7 @@ import Historial from './components/dashboard/historial.vue';
 import Filter from './components/filter/filter.vue';
 import ChatView from './components/chatview/chatview.vue';
 
+
 Vue.use(Router);
 
 export default new Router({
