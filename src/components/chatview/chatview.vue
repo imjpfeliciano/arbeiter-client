@@ -15,7 +15,12 @@
             :src="message.isFromUser ? userInformation.imageURL : contactInformation.imageURL"
             class="circle"
           />
-          <span class="title">{{ message.text }}</span>
+          <template v-if="message.isButton">
+            <a class="waves-effect waves-light btn orange accent-2" href="/dashboard/catalogo">{{ message.text }}</a>
+          </template>
+          <template v-else>
+            <span class="title">{{ message.text }}</span>
+          </template>
           <small class="secondary-content">
             {{ message.timestamp }}
           </small>
@@ -23,33 +28,70 @@
       </ul>
     </div>
     <div class="card-action">
-      Send message
+      Send message:
+      <input type="text" name="messagetext"  id="messagetext" v-model="messagetext">
+      <v-on:input class="waves-effect waves-light btn orange accent-2" @click="handleClick(messagetext)">Send</v-on:input>
     </div>
   </div>
 </template>
 
-<script>
+<script>  
+import moment from 'moment'
+
 export default {
+  computed: 
+  {
+    
+  },
+
+  methods:{
+    handleClick: function(msg)
+    {
+      const vm = this;
+      vm.messages.push({ text: msg, isFromUser: true, 
+        timestamp: moment().format('HH:mm') });
+
+
+      setTimeout(function()
+      {                  
+          vm.messages.push({ text: vm.botMessages[vm.botCount].text, isFromUser: false, 
+            timestamp: moment().format('HH:mm'), isButton: vm.botMessages[vm.botCount].isButton });
+  
+          vm.botCount++;
+      }, 1000);
+    }
+  },
   data() {
-    return {
-      contactInformation: {
+    return {  
+      botCount : 0,
+
+      contactInformation:
+      {
         name: 'Morgan Novak',
         imageURL: 'https://randomuser.me/api/portraits/men/58.jpg',
       },
 
-      userInformation: {
+      userInformation:
+      {
         name: 'Jhon Doe',
         imageURL: 'https://randomuser.me/api/portraits/men/40.jpg',
       },
 
-      messages: [
-        { text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam vero.', isFromUser: true, timestamp: '14:43' },
-        { text: 'Laboriosam quaerat sapiente minima nam minus similique illum architecto et!', isFromUser: false, timestamp: '14:44' },
-        { text: 'Incidunt vitae quae facere ducimus nostrum aliquid dolorum veritatis dicta!', isFromUser: true, timestamp: '15:37' },
-        { text: 'Tenetur laborum quod cum excepturi recusandae porro sint quas soluta!', isFromUser: false, timestamp: '15:38' },
+      messages:
+      [
+        
+      ],
+
+      botMessages:
+      [
+        { text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam vero.', isFromUser: false, isButton: false},
+        { text: 'Laboriosam quaerat sapiente minima nam minus similique illum architecto et!', isFromUser: false, isButton: false},
+        { text: 'Incidunt vitae quae facere ducimus nostrum aliquid dolorum veritatis dicta!', isFromUser: false, isButton: false},
+        { text: 'Aceptar orden.', isFromUser: false, isButton: true},
       ]
     }
-  }
+  },
+  
 }
 </script>
 
