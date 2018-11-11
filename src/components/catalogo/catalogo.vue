@@ -36,37 +36,37 @@ export default {
         {
           title: 'Mecánico',
           id: 'mecanico',
-          imageURL: 'https://picsum.photos/350/250',
+          imageURL: 'https://www.smartfolio.site/wp-content/uploads/2018/11/Mecanico.jpg',
         },
         {
           title: 'Carpintero',
           id: 'carpintero',
-          imageURL: 'https://picsum.photos/350/250',
+          imageURL: 'https://www.smartfolio.site/wp-content/uploads/2018/11/carpintero-350x250.jpg',
         },
         {
           title: 'Cerrajero',
           id: 'cerrajero',
-          imageURL: 'https://picsum.photos/350/250',
+          imageURL: 'https://www.smartfolio.site/wp-content/uploads/2018/11/cerrajero.jpeg',
         },
         {
           title: 'Electricista',
           id: 'electricista',
-          imageURL: 'https://picsum.photos/350/250',
+          imageURL: 'https://www.smartfolio.site/wp-content/uploads/2018/11/electricista.jpeg',
         },
         {
           title: 'Albañilería',
           id: 'albanileria',
-          imageURL: 'https://picsum.photos/350/250',
+          imageURL: 'https://www.smartfolio.site/wp-content/uploads/2018/11/albañil.jpeg',
         },
         {
-          title: 'Fontanero',
+          title: 'Construccion',
           id: 'fontanero',
-          imageURL: 'https://picsum.photos/350/250',
+          imageURL: 'https://www.smartfolio.site/wp-content/uploads/2018/11/construccion.jpeg',
         },
         {
           title: 'Cerrajero',
           id: 'cerrajero',
-          imageURL: 'https://picsum.photos/350/250',
+          imageURL: 'https://www.smartfolio.site/wp-content/uploads/2018/11/cerrajero.jpeg',
         },
         {
           title: 'Pintor',
@@ -82,5 +82,17 @@ export default {
 <style scoped>
 .card-title a {
   color: white;
+}
+.card .card-image img{
+  height: 126px;
+}
+.card .card-image .card-title{
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

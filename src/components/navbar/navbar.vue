@@ -1,7 +1,10 @@
 <template>
   <nav>
-    <div class="nav-wrapper indigo">
-      <a href="/" class="brand-logo">Arbeiter</a>
+    <div class="nav-wrapper indigo darken-4">
+      <a href="/" class="brand-logo">
+        <img :src="baseLogo">
+        <span class="brand-name">Arbeiter</span>
+      </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="/">Login</a></li>
         <li><a href="/registro">Registrarme</a></li>
@@ -73,8 +76,9 @@
   </nav>
         
 </template>
-
 <script>
+import Logo from '../../assets/arbeiter-logo.png';
+
 $(document).ready(function(){
   $(':radio').change(function() {
     console.log('New star rating: ' + this.value);
@@ -84,10 +88,27 @@ $(document).ready(function(){
     $('#modal1').modal('open');
   });  
 });
-export default {};
+export default {
+  data() {
+    return {
+      baseLogo: Logo,
+    }
+  } 
+};
 </script>
 
 <style>
+img {
+  height: 65px !important;
+  width: auto;
+  opacity: 0.9;
+}
+
+.brand-name {
+  margin-left: 20px;
+  position: fixed;
+}
+
 .h-50px{
   height: 50px;
 }

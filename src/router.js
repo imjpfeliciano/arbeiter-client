@@ -9,6 +9,7 @@ import Filter from './components/filter/filter.vue';
 import ChatView from './components/chatview/chatview.vue';
 import Feedback from './components/feedback/feedback.vue';
 
+
 Vue.use(Router);
 
 export default new Router({
