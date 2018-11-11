@@ -1,8 +1,32 @@
 <template>
-  <div>Login
-
-    <button class="waves-effect waves-light btn">Test</button>
-  </div>
+  	<div class="container">
+		<div class="row grey lighten-3">
+			<div class="col s12">
+				<div class="row">
+					<div class ="col s2">
+					</div>
+					<div class="input-field col s8 white">
+						<input placeholder="Usuario" id="user" type="email" class="validate">
+					</div>
+				</div>
+				<div class="row">
+					<div class ="col s2">
+					</div>
+					<div class="input-field col s8 white">
+						<input placeholder="Contraseña" id="pass" type="password" class="validate">
+					</div>
+				</div>
+				<div class="row">
+					<div class ="col s5">
+					</div>
+					<div class="col s5">
+					 	<button class="btn waves-effect orange accent-4" onclick="window.location.href='/dashboard'">Submit
+				  		</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
